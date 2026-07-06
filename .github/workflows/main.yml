@@ -34,7 +34,7 @@ jobs:
             -r cli,htmlextra
 
       - name: Newman Report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4 # ensures that the archive executed irrespective whether the previous setp has passed or not!
         if: always()
         with:
           name: Newman-Report
